@@ -2,31 +2,61 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Park - סורק חנייה</title>
-    <link rel="stylesheet" href="style.css">
+    <title>חיפוש חנייה</title>
     <style>
-        .scan-container {
+        /* עיצוב בסיסי מאוד להתחלה */
+        body {
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 80px;
+            padding-top: 50px;
+            background-color: #f4f4f4;
         }
-       
+
+        .loader-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* ספינר פשוט שנוצר בעזרת CSS בלבד - רמה בסיסית */
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        .status-text {
-            font-size: 1.2rem;
-            color: #555;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
-    <div class="scan-container">
-        <h1>מחפש לך חנייה מושלמת...</h1>
-        <div class="loader"></div>
-        <p class="status-text" id="status">סורק חניונים קרובים...</p>
-    </div>
 
-    
+    <main class="loader-container">
+        <div class="spinner"></div>
+        <h2 id="status-title">מחפש חנייה ב-Narnia...</h2>
+        <p id="status-desc">מתחבר לשרת...</p>
+    </main>
+
+    <script>
+        // שימוש ב-Vanilla JavaScript פשוט במקום jQuery
+        // הפונקציה משנה את הטקסט אחרי כמה שניות כדי לדמות טעינה
+        
+        setTimeout(() => {
+            document.getElementById('status-desc').innerText = "בודק זמינות בחניונים...";
+        }, 2000);
+
+        setTimeout(() => {
+            document.getElementById('status-desc').innerText = "מצליב נתוני רכב...";
+        }, 4000);
+    </script>
+
 </body>
+</html>
