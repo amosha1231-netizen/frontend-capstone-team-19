@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Park - אודות המערכת</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .info-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid #007bff;
+        }
+        .feature-card h4 { color: #007bff; margin-bottom: 10px; }
+        .team-section {
+            margin-top: 50px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">על Smart Park</h1>
+    
+    <nav style="text-align: center;">
+        <a href="index.html" style="text-decoration: none; font-weight: bold; color: #007bff;">🔙 חזרה לדף הבית</a>
+    </nav>
+
+    <div class="info-section">
+        <h3>הפתרון החכם לבעיות החניה שלך</h3>
+        <p>Smart Park פותחה כדי לחסוך לנהגים זמן, דלק ועצבים. המערכת שלנו סורקת את כלל החניונים בעיר ומתאימה לך את החניה המדויקת לפי סוג הרכב והמרחק שלך.</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>מהירות</h4>
+                <p>מציאת חניה תוך פחות מ-30 שניות.</p>
+            </div>
+            <div class="feature-card">
+                <h4>התאמה אישית</h4>
+                <p>חניות נכים, עמדות טעינה ורכבים גבוהים.</p>
+            </div>
+            <div class="feature-card">
+                <h4>ניווט ישיר</h4>
+                <p>חיבור ישיר ל-Waze או Google Maps.</p>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h3>הצוות שלנו</h3>
+            <p>עמוס, ניצן, עידן ואור - סטודנטים להנדסת תעשייה.</p>
+        </div>
+    </div>
+</body>
+</html>
