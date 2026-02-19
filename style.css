@@ -164,6 +164,7 @@ nav a {
 /* =========================================
    5. דף סריקה (Scanning.html) של עידן
    ========================================= */
+
 .scanning-body {
     height: 100vh;
     display: flex;
@@ -256,3 +257,40 @@ nav a {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
+/* תפריט המבורגר */
+.navbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.hamburger {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#nav-menu {
+    display: none; /* מוסתר כברירת מחדל */
+    list-style: none;
+    background: white;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 150px;
+}
+
+#nav-menu.show {
+    display: block; /* מוצג בלחיצה */
+}
+
+#nav-menu li { margin: 10px 0; }
+#nav-menu a { text-decoration: none; color: var(--text-color); font-weight: bold; }
