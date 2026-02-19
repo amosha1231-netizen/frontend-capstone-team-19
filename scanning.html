@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Park - סורק חנייה</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .scan-container {
+            text-align: center;
+            margin-top: 80px;
+        }
+       
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .status-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scan-container">
+        <h1>מחפש לך חנייה מושלמת...</h1>
+        <div class="loader"></div>
+        <p class="status-text" id="status">סורק חניונים קרובים...</p>
+    </div>
+
+    
+</body>
