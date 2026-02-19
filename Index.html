@@ -10,9 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="home-body">
-    <nav class="navbar navbar-light fixed-top bg-transparent">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-transparent">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-primary" href="#">Smart Park</a>
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Smart Park</a>
+            <div class="ms-auto">
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item me-3"><a class="nav-link" href="selection.html">⚙️ הגדרות</a></li>
+                    <li class="nav-item"><a class="nav-link" href="info.html">ℹ️ אודות</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -25,7 +32,13 @@
             <div class="pulse-ring"></div>
             <div class="pulse-ring delay"></div>
         </div>
-        <p class="text-muted mt-4">לחץ לאיתור חנייה מהיר ב-Narnia City</p>
+        <div class="text-center mt-4">
+            <h2 class="h4">ברוכים הבאים ל-Smart Park</h2>
+            <p class="text-muted">איתור חנייה חכמה ב-Narnia City בלחיצת כפתור</p>
+        </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
