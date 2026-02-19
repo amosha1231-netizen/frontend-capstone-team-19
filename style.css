@@ -1,4 +1,4 @@
-/* עיצוב בסיסי התחלתי (אב-טיפוס) */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
@@ -56,4 +56,135 @@ input {
     margin-top: 5px;
     margin-bottom: 15px;
     box-sizing: border-box;
+}
+/* עיצוב בסיסי התחלתי (אב-טיפוס) */
+/* =========================================
+   1. הגדרות בסיס וצבעים
+   ========================================= */
+:root {
+    --primary-color: #4a90e2;       /* כחול הייטק */
+    --primary-dark: #357abd;        /* כחול כהה ללחיצה */
+    --accent-green: #2ecc71;        /* ירוק הצלחה */
+    --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    background-image: var(--bg-gradient);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* =========================================
+   2. דף הבית והכפתור הפועם (Shazam Style)
+   ========================================= */
+.home-body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shazam-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shazam-btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--primary-color), #2c6eb5);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.4);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shazam-btn:hover {
+    transform: scale(1.05);
+}
+
+/* אנימציית הטבעות הפועמות */
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(74, 144, 226, 0.5);
+    animation: pulse 3s infinite ease-out;
+}
+
+.pulse-ring.delay {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* =========================================
+   3. מסך טעינה (Loading Overlay)
+   ========================================= */
+.loading-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   4. כפתורים כלליים (לשאר הדפים)
+   ========================================= */
+.action-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-dark);
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    /* הוספת תמונת רקע של חניון */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* הרקע לא זז כשגוללים */
+    margin: 0;
+    min-height: 100vh;
 }
