@@ -7,9 +7,39 @@
     <title>Smart Park - בחירת רכב</title>
     <link rel="stylesheet" href="style.css">
     <style>
+      
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+      
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            border: 1px solid #007bff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
         .selection-container {
             max-width: 500px;
-            margin: 50px auto;
+            margin: 30px auto;
             background: white;
             padding: 30px;
             border-radius: 15px;
@@ -37,17 +67,24 @@
             margin-left: 15px;
         }
 
-        .vehicle-option.selected {
-            border-color: #007bff;
-            background-color: #e7f1ff;
+       
+        .submit-btn {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
         }
 
-        button:hover {
+        .submit-btn:hover {
             background-color: #0056b3;
-            /* כחול כהה יותר */
             transform: scale(1.02);
-            /* הגדלה קטנטנה של הכפתור */
-            transition: 0.2s;
         }
     </style>
 </head>
@@ -57,7 +94,7 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">חזרה לבית</a></li>
+            <li><a href="index.html">🔙 חזרה לבית</a></li>
         </ul>
     </nav>
 
@@ -86,19 +123,19 @@
                 <span>🚐 רכב גבוה/גדול</span>
             </label>
 
-            <button type="submit" style="width: 100%;">המשך לחיפוש חניה</button>
+            <button type="submit" class="submit-btn">המשך לחיפוש חניה</button>
         </form>
     </div>
 
     <script>
-
         document.getElementById('selectionForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const selectedVehicle = document.querySelector('input[name="vehicle"]:checked').value;
             localStorage.setItem('selectedVehicleType', selectedVehicle);
 
             alert('העדפת הרכב נשמרה! מחפש חניה מתאימה...');
-
+          
+            window.location.href = 'scanning.html';
         });
     </script>
 </body>
