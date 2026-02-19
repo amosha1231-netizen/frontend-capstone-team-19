@@ -21,15 +21,42 @@ body {
 }
 
 /* =========================================
-   2. דף הבית (Index.html) - הכפתור הפועם
+   2. תפריט ניווט עליון (Navbar)
+   ========================================= */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* =========================================
+   3. דף הבית (Index.html) - הכפתור הפועם
    ========================================= */
 .home-body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
     background-image: var(--bg-gradient);
+    margin: 0;
+    padding: 0;
+}
+
+.main-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* הפקודה הזו מושכת את הכפתור בדיוק למרכז האופקי! */
+    width: 100%;
 }
 
 .shazam-container {
@@ -39,6 +66,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto; /* הבטחה נוספת למרכוז */
 }
 
 .shazam-btn {
@@ -79,8 +107,17 @@ body {
 }
 
 /* =========================================
-   3. דף בחירת רכב (Selection.html)
+   4. דף בחירת רכב (Selection.html) של ניצן
    ========================================= */
+.selection-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .vehicle-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -99,24 +136,51 @@ body {
 }
 
 .vehicle-card i { font-size: 1.5rem; display: block; margin-bottom: 5px; }
-
 .vehicle-card:hover { border-color: var(--primary-color); }
-
 .vehicle-card.selected {
     border-color: var(--primary-color);
     background-color: #f0f7ff;
     color: var(--primary-color);
 }
 
+.vehicle-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vehicle-option:hover {
+    border-color: var(--primary-color);
+    background-color: #f8f9fa;
+}
+
+.vehicle-option input { margin-left: 15px; }
+
 /* =========================================
-   4. דף סריקה (Scanning.html)
+   5. דף סריקה (Scanning.html) של עידן
    ========================================= */
 .scanning-body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.radar-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .pulsing-icon {
@@ -146,7 +210,7 @@ body {
 }
 
 /* =========================================
-   5. דף תוצאות (Result.html)
+   6. דף תוצאות (Result.html)
    ========================================= */
 .map-container {
     width: 100%;
@@ -172,22 +236,23 @@ body {
 }
 
 /* =========================================
-   6. כפתורים כלליים
+   7. כפתורים כלליים
    ========================================= */
-.action-btn {
+.action-btn, .submit-btn {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 12px 30px;
+    padding: 15px;
     font-size: 1.1rem;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
     width: 100%;
     transition: all 0.3s ease;
+    margin-top: 15px;
 }
 
-.action-btn:hover {
+.action-btn:hover, .submit-btn:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
