@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Park - חנייה נמצאה!</title>
+    <title>חנייה נמצאה!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,6 +16,7 @@
     <main style="max-width: 600px; margin: 0 auto; padding: 20px;">
         
         <div class="map-container">
+            
             <div class="map-legend-top">
                 <div class="legend-item"><span class="dot" style="background-color: #a8e6cf;"></span><span>פארק</span></div>
                 <div class="legend-item"><span class="dot" style="background-color: #ffaaa5;"></span><span>בניינים</span></div>
@@ -36,12 +37,21 @@
                 <rect x="50" y="180" width="80" height="80" fill="#ffaaa5" rx="5" />
                 <text x="90" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">מגורים</text>
 
-                <circle cx="200" cy="150" r="15" fill="#b71c1c" stroke="white" stroke-width="3" class="location-dot"></circle>
-                
+                <circle 
+                    cx="200" 
+                    cy="150" 
+                    r="15" 
+                    fill="#b71c1c" 
+                    stroke="white" 
+                    stroke-width="3" 
+                    class="location-dot"> </circle>
                 <g class="pin-jumping">
-                    <text x="270" y="60" font-size="24">📍</text>
-                    <text x="295" y="55" font-family="Arial" font-size="14" fill="#333" font-weight="bold">חניון רוטשילד</text>
+                    
+                    <text x="280" y="70" font-family="Arial" font-size="14" fill="#333" font-weight="bold">📍</text>
+                    <text x="300" y="85" font-family="Arial" font-size="14" fill="#333" font-weight="bold"> חניון רוטשילד</text>
+
                 </g>
+                
             </svg>
         </div>
 
@@ -52,7 +62,7 @@
             
             <h3>חניון רוטשילד (מרכז העיר)</h3>
             <p><strong>סוג רכב:</strong> <span id="vehicleDisplay">...</span></p>
-            <p id="matchReason">טוען נתונים...</p>
+            <p id="matchReason">נמצא מקום פנוי המותאם בדיוק לצרכים שלך.</p>
             
             <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
             
@@ -71,7 +81,7 @@
                 </div>
             </div>
 
-            <button class="action-btn w-100" onclick="alert('הניווט נשלח ל-Waze בהצלחה!')">
+            <button class="action-btn" onclick="alert('הניווט נשלח ל-Waze בהצלחה!')">
                 נווט לחנייה <i class="fas fa-location-arrow"></i>
             </button>
             <br><br>
@@ -79,6 +89,20 @@
         </div>
     </main>
     
-    <script src="main.js"></script>
+    <script>
+        // שליפת הנתונים שנשמרו ב-LocalStorage
+        const vehicle = localStorage.getItem('userVehicle') || "רכב פרטי";
+        document.getElementById('vehicleDisplay').innerText = vehicle;
+    </script>
 </body>
+<nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-menu">
+        <li><a href="index.html">דף הבית</a></li>
+        <li><a href="selection.html">בחירת רכב</a></li>
+        <li><a href="result.html">תוצאות אחרונות</a></li>
+    </ul>
+</nav>
 </html>
