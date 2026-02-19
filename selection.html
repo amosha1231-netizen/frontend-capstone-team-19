@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
         .vehicle-option {
             display: flex;
             align-items: center;
@@ -24,23 +26,35 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         .vehicle-option:hover {
             border-color: #007bff;
             background-color: #f8f9fa;
         }
+
         .vehicle-option input {
             width: auto;
             margin-left: 15px;
         }
+
         .vehicle-option.selected {
             border-color: #007bff;
             background-color: #e7f1ff;
         }
+
+        button:hover {
+            background-color: #0056b3;
+            /* כחול כהה יותר */
+            transform: scale(1.02);
+            /* הגדלה קטנטנה של הכפתור */
+            transition: 0.2s;
+        }
     </style>
 </head>
+
 <body>
     <h1>סוג רכב לחניה</h1>
-    
+
     <nav>
         <ul>
             <li><a href="index.html">חזרה לבית</a></li>
@@ -50,7 +64,7 @@
     <div class="selection-container">
         <h3>בחר את סוג הרכב שלך:</h3>
         <p>המידע יעזור לנו למצוא לך חניה מותאמת אישית</p>
-        
+
         <form id="selectionForm">
             <label class="vehicle-option">
                 <input type="radio" name="vehicle" value="private" required>
@@ -77,15 +91,16 @@
     </div>
 
     <script>
-       
-        document.getElementById('selectionForm').addEventListener('submit', function(e) {
+
+        document.getElementById('selectionForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const selectedVehicle = document.querySelector('input[name="vehicle"]:checked').value;
             localStorage.setItem('selectedVehicleType', selectedVehicle);
-            
+
             alert('העדפת הרכב נשמרה! מחפש חניה מתאימה...');
-           
+
         });
     </script>
 </body>
+
 </html>
