@@ -2,106 +2,48 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Park - אודות המערכת</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אודות Smart Park</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            /* הוספת תמונת רקע של חניון - תמונה איכותית ממאגר חינמי */
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                        url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 15px; /* צמצום מרווח עליון */
-            margin-bottom: 5px;
-            color: #222;
-        }
-
-        nav {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .info-section {
-            max-width: 800px;
-            margin: 0 auto; /* צמצום מרווח מהצדדים ומהלמעלה */
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.9); /* רקע לבן חצי שקוף לתוכן */
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        h3 { margin-top: 5px; } /* צמצום מרווח מעל כותרת משנית */
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px; /* צמצום רווח בין הכרטיסים */
-            margin-top: 20px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-align: center;
-            border-bottom: 4px solid #007bff;
-            transition: transform 0.3s ease; /* הכנה להערה של עמוס על ה-Hover */
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px); /* אפקט קפיצה קטן */
-        }
-
-        .feature-card h4 { color: #007bff; margin: 5px 0; }
-
-        .team-section {
-            margin-top: 25px; /* צמצום מרווח מעל הצוות */
-            background: #f1f3f5;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        p { line-height: 1.4; margin-bottom: 10px; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <h1>על Smart Park</h1>
+<body style="background: #f8f9fa;">
     
-    <nav>
-        <a href="index.html" style="text-decoration: none; font-weight: bold; color: #007bff;">🔙 חזרה לדף הבית</a>
-    </nav>
-
-    <div class="info-section">
-        <h3>הפתרון החכם לבעיות החניה שלך</h3>
-        <p>Smart Park פותחה כדי לחסוך לנהגים זמן, דלק ועצבים. המערכת שלנו סורקת את כלל החניונים בעיר ומתאימה לך את החניה המדויקת לפי סוג הרכב והמרחק שלך.</p>
-
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h4>מהירות</h4>
-                <p>מציאת חניה תוך פחות מ-30 שניות.</p>
-            </div>
-            <div class="feature-card">
-                <h4>התאמה אישית</h4>
-                <p>חניות נכים, עמדות טעינה ורכבים גבוהים.</p>
-            </div>
-            <div class="feature-card">
-                <h4>ניווט ישיר</h4>
-                <p>חיבור ישיר ל-Waze או Google Maps.</p>
-            </div>
+    <div class="container mt-4">
+        <div class="d-flex align-items-center mb-4">
+            <a href="index.html" class="btn btn-outline-secondary me-3"><i class="fas fa-arrow-right"></i></a>
+            <h3>אודות המערכת</h3>
         </div>
 
-        <div class="team-section">
-            <h3>הצוות שלנו</h3>
-            <p>עמוס, ניצן, עידן ואור - סטודנטים להנדסת תעשייה.</p>
+        <div class="card p-4 shadow-sm border-0">
+            <div class="text-center mb-4">
+                <h1 style="color: #4a90e2;"><i class="fas fa-parking"></i> Smart Park</h1>
+                <p class="text-muted">הפתרון החכם לחנייה עירונית</p>
+            </div>
+
+            <h5>מי אנחנו?</h5>
+            <p>מערכת Smart Park נולדה מתוך צורך אמיתי לחסוך זמן יקר בחיפוש חנייה בערים צפופות. המערכת משתמשת בטכנולוגיית חיישנים מתקדמת ב-Narnia City כדי לאתר מקומות פנויים בזמן אמת.</p>
+            
+            <hr>
+
+            <h5>איך זה עובד?</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check text-success ms-2"></i> <strong>זיהוי:</strong> האלגוריתם מזהה את מיקום הרכב שלך.</li>
+                <li class="mb-2"><i class="fas fa-check text-success ms-2"></i> <strong>התאמה:</strong> אנחנו מוצאים חנייה שמתאימה בדיוק לגודל הרכב שלך.</li>
+                <li class="mb-2"><i class="fas fa-check text-success ms-2"></i> <strong>ניווט:</strong> לחיצה אחת ואתה בדרך לחנייה.</li>
+            </ul>
+
+            <div class="alert alert-info mt-3">
+                <small>גרסה: 1.0.2 (Beta) | כל הזכויות שמורות ©️ 2024</small>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
 </html>

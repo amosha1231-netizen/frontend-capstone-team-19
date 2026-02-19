@@ -2,61 +2,28 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>חיפוש חנייה</title>
-    <style>
-        /* עיצוב בסיסי מאוד להתחלה */
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f4f4f4;
-        }
-
-        .loader-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        /* ספינר פשוט שנוצר בעזרת CSS בלבד - רמה בסיסית */
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחפש חנייה...</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
     <main class="loader-container">
         <div class="spinner"></div>
-        <h2 id="status-title">מחפש חנייה ב-Narnia...</h2>
-        <p id="status-desc">מתחבר לשרת...</p>
+        <h2>מנתח מצב חנייה ב-Narnia City...</h2>
+        <p>בודק זמינות בחניוני העיר...</p>
+        <p>מצליב נתוני גודל רכב...</p>
     </main>
-
-    <script>
-        // שימוש ב-Vanilla JavaScript פשוט במקום jQuery
-        // הפונקציה משנה את הטקסט אחרי כמה שניות כדי לדמות טעינה
-        
-        setTimeout(() => {
-            document.getElementById('status-desc').innerText = "בודק זמינות בחניונים...";
-        }, 2000);
-
-        setTimeout(() => {
-            document.getElementById('status-desc').innerText = "מצליב נתוני רכב...";
-        }, 4000);
-    </script>
-
+    <script src="main.js"></script>
 </body>
+<nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-menu">
+        <li><a href="index.html">דף הבית</a></li>
+        <li><a href="selection.html">בחירת רכב</a></li>
+        <li><a href="result.html">תוצאות אחרונות</a></li>
+    </ul>
+</nav>
 </html>
