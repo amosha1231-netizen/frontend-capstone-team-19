@@ -2,24 +2,37 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Park - אב טיפוס</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Park - בית</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>ברוכים הבאים ל-Smart Park</h1>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">בית</a></li>
-            <li><a href="register.html">הגדרות</a></li>
-            <li><a href="info.html">אודות</a></li>
-        </ul>
-    </nav>
-    
-    <div style="background: white; padding: 40px; border-radius: 10px; display: inline-block;">
-        <h2>מערכת לאיתור חניה חכמה</h2>
-        <p>לחץ כאן כדי להתחיל חיפוש:</p>
-        <a href="selection.html"><button>מצא חניה עכשיו</button></a>
-    </div>
+    <header>
+        <h1>Smart Park Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">דף בית</a></li>
+                <li><a href="register.html">הרשמה/הגדרות</a></li>
+                <li><a href="info.html">אודות</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="text-align: center; padding: 20px;">
+        <h2>ברוכים הבאים למערכת איתור חניה חכמה</h2>
+        <p>מצא חנייה בקלות ובמהירות בעיר.</p>
+        
+        <div class="mock-map" aria-label="מפת חניונים" style="background: #e0e0e0; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 15px; margin: 20px 0;">
+            <p>📍 כאן תוצג המפה המדומה</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <p>מוכנים לצאת לדרך?</p>
+            <a href="selection.html" class="btn"><button style="padding: 10px 20px; cursor: pointer;">מצא חניה עכשיו</button></a>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
