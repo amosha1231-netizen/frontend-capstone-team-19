@@ -2,20 +2,27 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Park - Register</title>
+    <title>הגדרות ורישום</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>הגדרות ורישום</h1>
-    <a href="index.html">חזור לבית</a>
+    <h1>פרופיל אישי</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">חזור לבית</a></li>
+        </ul>
+    </nav>
     
     <form>
-        <label>מייל:</label>
-        <input type="email" name="email"><br><br>
+        <h3>הגדרות חשבון</h3>
+        <label>כתובת אימייל:</label>
+        <input type="email" placeholder="הכנס מייל...">
         
-        <label>מספר רכב:</label>
-        <input type="text" name="carNumber"><br><br>
+        <label>מספר רכב (ברירת מחדל):</label>
+        <input type="text" placeholder="למשל 12-345-67">
         
-        <button type="submit">שמור</button>
+        <button type="submit">שמור נתונים</button>
     </form>
 </body>
 </html>

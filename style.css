@@ -1,118 +1,59 @@
-:root {
-    --primary-color: #4a90e2;
-    --secondary-color: #50e3c2;
-    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    --shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
+/* עיצוב בסיסי התחלתי (אב-טיפוס) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    background: var(--bg-gradient);
-    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    text-align: center;
+    direction: rtl;
+    padding: 40px;
 }
 
-/* עיצוב Navbar */
-.navbar {
-    background: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
-/* מרכז המסך */
-.main-center {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+nav li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* מיכל הכפתור */
-.shazam-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* הכפתור הראשי */
-.shazam-btn {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: none;
-    background: linear-gradient(45deg, var(--primary-color), #357abd);
-    color: white;
-    font-size: 1.2rem;
+nav a {
+    text-decoration: none;
+    color: #0056b3;
     font-weight: bold;
-    z-index: 10;
+    font-size: 1.1rem;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 0 0 10px rgba(74, 144, 226, 0.2);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 15px;
 }
 
-.shazam-btn:active {
-    transform: scale(0.95);
+button:hover {
+    background-color: #0056b3;
 }
 
-/* אנימציית הגלים (Pulse) */
-.pulse-ring {
-    position: absolute;
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: right;
+}
+
+input {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(74, 144, 226, 0.4);
-    opacity: 0;
-    z-index: 1;
-    animation: pulse 2.5s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.pulse-ring.delay {
-    animation-delay: 1.25s;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.7;
-    }
-    50% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: scale(2.5);
-        opacity: 0;
-    }
-}
-
-/* מסך טעינה */
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    right: 0; /* RTL Fix */
-    left: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
-}
-
-/* כרטיסיות מידע (לעמוד אודות) */
-.card-hover:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
