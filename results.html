@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Park - חנייה נמצאה!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; margin-top: 20px; color: #4a90e2;">תוצאות סריקה</h1>
+    </header>
+
+    <main style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        
+        <div class="map-container">
+            <div class="map-legend-top">
+                <div class="legend-item"><span class="dot" style="background-color: #a8e6cf;"></span><span>פארק</span></div>
+                <div class="legend-item"><span class="dot" style="background-color: #ffaaa5;"></span><span>בניינים</span></div>
+                <div class="legend-item"><span class="dot" style="background-color: #b71c1c;"></span><span>החנייה שלך</span></div>
+            </div>
+
+            <svg width="100%" height="100%" viewBox="0 0 400 300" style="background-color: #e6e6e6;">
+                <line x1="0" y1="150" x2="400" y2="150" stroke="white" stroke-width="20" />
+                <line x1="200" y1="0" x2="200" y2="300" stroke="white" stroke-width="20" />
+                
+                <rect x="20" y="20" width="100" height="100" fill="#a8e6cf" rx="10" />
+                <text x="70" y="75" text-anchor="middle" font-family="Arial" font-size="14" fill="#333" font-weight="bold">פארק</text>
+
+                <rect x="280" y="180" width="100" height="100" fill="#a8e6cf" rx="10" />
+                <text x="330" y="235" text-anchor="middle" font-family="Arial" font-size="14" fill="#333" font-weight="bold">איזור תעשייה</text>
+
+                <rect x="230" y="30" width="60" height="60" fill="#ffaaa5" rx="5" />
+                <rect x="50" y="180" width="80" height="80" fill="#ffaaa5" rx="5" />
+                <text x="90" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">מגורים</text>
+
+                <circle cx="200" cy="150" r="15" fill="#b71c1c" stroke="white" stroke-width="3" class="location-dot"></circle>
+                
+                <g class="pin-jumping">
+                    <text x="270" y="60" font-size="24">📍</text>
+                    <text x="295" y="55" font-family="Arial" font-size="14" fill="#333" font-weight="bold">חניון רוטשילד</text>
+                </g>
+            </svg>
+        </div>
+
+        <div class="result-card">
+            <h2 class="full-match-highlight">
+                <i class="fas fa-check-circle"></i> התאמה מלאה!
+            </h2>
+            
+            <h3>חניון רוטשילד (מרכז העיר)</h3>
+            <p><strong>סוג רכב:</strong> <span id="vehicleDisplay">...</span></p>
+            <p id="matchReason">טוען נתונים...</p>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+            
+            <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                <div>
+                    <i class="fas fa-car fa-lg" style="color: #4a90e2;"></i>
+                    <br><small>2 דק' נסיעה</small>
+                </div>
+                <div>
+                    <i class="fas fa-shekel-sign fa-lg" style="color: #4a90e2;"></i>
+                    <br><small>25 ש"ח/שעה</small>
+                </div>
+                <div>
+                    <i class="fas fa-umbrella-beach fa-lg" style="color: #4a90e2;"></i>
+                    <br><small>חניון מקורה</small>
+                </div>
+            </div>
+
+            <button class="action-btn w-100" onclick="alert('הניווט נשלח ל-Waze בהצלחה!')">
+                נווט לחנייה <i class="fas fa-location-arrow"></i>
+            </button>
+            <br><br>
+            <a href="index.html" style="color: #999; text-decoration: none;">התחל חיפוש חדש</a>
+        </div>
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>
